@@ -9,14 +9,14 @@
  </head>
  <body>
   <!-- visible on load  -->
-  <div class="timer">Time: <span id="time">60</span></div>
+  <div class="timer">Time: <span id="time">0</span></div>
   <div class="wrapper">
    <div id="start-screen" class="start">
     <h1>This is a Coding Quiz</h1>
     <p>
      Answer these Trivia Questions
     </p>
-    <button id="start">Start Quiz</button>
+    <button id="startBtn">Start Quiz</button>
    </div>
    <!-- hide the questions -->
    <div id="questions" class="hide">
