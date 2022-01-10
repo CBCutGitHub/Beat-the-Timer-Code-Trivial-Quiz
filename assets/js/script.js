@@ -9,6 +9,22 @@ var quizQuestions = [
      title: "The condition in an if / else statement is enclosed within ____.",
      choices: ["quotes", "curly brackets", "parentheses", "square brackets"],
      answer: "parentheses"
+    },
+    // ***ADDING 3 MORE QUESTIONS AND ANSWERS***
+    {
+     title: "div has no meaning but represents:",
+     choices: ["input", "children", "output", "submit"],
+     answer: "children"
+    },
+    {
+     title: "src attribute specifies the what of an external script:",
+     choices: ["webpage", "service", "URL", "link"],
+     answer: "URL"
+    },
+    {
+      title: "Input element represents what kind of data:",
+      choices: ["array data", "autofill data", "optional data", "typed data"],
+      answer: "typed data"
     }
    ]
 var questions = document.getElementById("questions");
@@ -17,7 +33,7 @@ var questionchoices = document.getElementById("choices");
 var submit = document.getElementById("submit");
 var startBtn = document.getElementById("start");
 var initialsEl = document.getElementById("initials");
-var feedbackEl = document.getElementById("feedback");
+var score = document.getElementById ("final-score");
 var QuestionIndex = 0;
 var time = 60;
 var timestate;
@@ -25,7 +41,9 @@ var timestate;
 function Incrementtime(){
 time = time - 1
 timerdisplay.textContent=time
-if(time<=0){console.log("Quiz is over")}
+if(time<=0){console.log("Quiz is over")
+clearInterval(timestate)
+}
 
 }
 
@@ -37,23 +55,64 @@ timestate = setInterval(Incrementtime, 1000)
 timerdisplay.textContent = time
 questions.removeAttribute("class")
 // call question function
-displayQuestions ()
+displayQuestion ()
 }
 // Function to display questions
-function displayQuestions(){
-var QuestionIndex = 0;
+function displayQuestion(){
+
 var currentQuestion = quizQuestions[QuestionIndex]
 var title = document.getElementById("question-title")
 title.textContent = currentQuestion.title
+questionchoices.innerHTML = ""
+
+// 
+currentQuestion.choices.forEach((choice) => {
+    // create each choices as a button
+    var choiceNode = document.createElement("button");
+    choiceNode.setAttribute("class", "choices");
+    choiceNode.setAttribute("value", choice);
+    choiceNode.textContent = choice;
+    // create an event listener for each choices
+    choiceNode.onclick = checkQuestion;
+    // show on page
+    questionchoices.appendChild(choiceNode);
+})
+}
+// Function to check if question is right or wrong, penalize if wrong, cycle to next questions, and if no more questions, end quiz
+function checkQuestion (){
+    if (this.value !== quizQuestions[QuestionIndex].answer) {
+        // time penalty
+        time -= 10;
+        if (time < 0) {
+          time = 0;
+        }
+        // show updated time in top right corner
+        timerdisplay.textContent = time;
+     alert("wrong!!")
+      } else {
+    alert("Correct!")
+      }
+      // cycle to next question
+      QuestionIndex++;
+      if (QuestionIndex ===quizQuestions.length) {
+        endQuiz()
+
+        
+      } else {
+        displayQuestion();
+      }
+}
+// End quiz function
+function endQuiz(){console.log("quiz is over")
+var endScreen=document.getElementById("end-screen")
+endScreen.removeAttribute("class")
+questions.setAttribute("class", "hide")
+score.textContent=time
+clearInterval(timestate)
 }
 
-// Function to check if question is right or wrong, penalize if wrong, cycle to next questions, and if no more questions, end quiz
-
-// End quiz function
-
-
-
-
+// Working on resolving the final score and functionality of the 
+//initials and submit and save to local storage.
 
 // line 19 html and line 6 script.js
 startBtn.onclick = StartQuiz
