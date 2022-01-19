@@ -29,11 +29,19 @@
    <!-- end of quiz unhide with finished with questions -->
    <div id="end-screen" class="hide">
     <h2> I AM NOT DONE</h2>
-    <p>Your final score is <span id="final-score"></span>.</p>
+    <p>You have completed quiz with <span id="final-score"></span> seconds remaining.</p>
     <p>
      Enter initials: <input type="text" id="initials" max="3" />
      <button id="submit">Submit</button>
     </p>
+
+    <ol id="showscores"></ol>
+    <button onclick="reloadQuiz()">Try Again?</button>
+
+   </div>
+
+   <div>
+
    </div>
    <!-- <div id="rightwrong" class=“rightwrong hide"></div> -->
   </div> 

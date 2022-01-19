@@ -110,9 +110,35 @@ questions.setAttribute("class", "hide")
 score.textContent=time
 clearInterval(timestate)
 }
-
-// Working on resolving the final score and functionality of the 
+function reloadQuiz(){
+  window.location.reload()
+}
+//** WORKING on resolving the final score and functionality of the 
 //initials and submit and save to local storage.
+function saveScore (){
 
+  var getinitials = initialsEl.value
+  var userScore = {
+    score:time,
+    userName:getinitials
+  }
+// Upon load, get value in loocal storage; if no value, leave as empty array
+  var scoreDisplay = JSON.parse(localStorage.getItem("userscores"))|| []
+// If there is a new userscore, push to scoreDisplay array
+scoreDisplay.push(userScore)
+// Set any userscores into localStorage with the label userscores
+localStorage.setItem("userscores", JSON.stringify(scoreDisplay))
+}
+function showscoreTable(){
+  var scoreDisplay = JSON.parse(localStorage.getItem("userscores"))|| []
+scoreDisplay.forEach(function(newScore){
+  var scoreList = document.getElementById("showscores")
+  var scorelistItem = document.createElement("li")
+scorelistItem.textContent = newScore.userName + ": "+ newScore.score
+scoreList.appendChild(scorelistItem)
+})
+}
 // line 19 html and line 6 script.js
+showscoreTable()
 startBtn.onclick = StartQuiz
+submit.onclick = saveScore
