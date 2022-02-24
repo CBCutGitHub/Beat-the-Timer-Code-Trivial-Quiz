@@ -1,33 +1,27 @@
-# 04 Web APIs: Code Quiz
+Beat the Timer Code Trivial Quiz
 
-## Your Task
+Application Description
 
-At some point in your journey to become a full-stack web developer, you’ll likely be asked to complete a coding assessment&mdash;perhaps as part of an interview process. A typical coding assessment includes both multiple-choice questions and interactive coding challenges. 
+Beat the Timer Code Trivial Quiz application is an extremely simple to use tool that allows users to test their coding knowledge on various programming topics.
 
-To help familiarize you with these tests and allow you to use the skills covered in this unit, this week’s homework invites you to build a timed coding quiz with multiple-choice questions. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean, polished, and responsive user interface. 
+Code Quiz Activities
 
-This week’s coursework will equip you with all the skills you need to succeed in this assignment.
+Most code quiz activities are offered with programming classes or as an open source tool that allows users to gauge their knowledge on a variety of topics.  Some quiz are specific to a programming language and some quiz covers a broad spectrum of methodologies , functionalities, and techniques. 
 
-## User Story
+Application Functionality
 
-```
-AS A coding boot camp student
-I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
-SO THAT I can gauge my progress compared to my peers
-```
+This application presents a challenge to users to beat the timer by answering six questions with a 60-second time limit.  Upon launching the application, a timer set at 60 seconds appears on the screen. Once the user clicks the Start Quiz button, the timer starts, the questions and choice of answers are displayed one at a time.  
 
-## Acceptance Criteria
+When the user click on their choice as the answer, an alert will appear. If the answer selected is correct, an alert will appear with a message “correct!” or if the answer is not correct, the message is “Incorrect! (research topic)”. For every incorrect answer, the user is penalized -10 seconds.
 
-```
-GIVEN I am taking a code quiz
-WHEN I click the start button
-THEN a timer starts and I am presented with a question
-WHEN I answer a question
-THEN I am presented with another question
-WHEN I answer a question incorrectly
-THEN time is subtracted from the clock
-WHEN all questions are answered or the timer reaches 0
-THEN the game is over
-WHEN the game is over
-THEN I can save my initials and my score
-```
+The user’s score is the remaining seconds displayed on the timer. The user is prompted to enter their initials up to 3 characters and click submit to save the results. The results are then displayed e.g., 31: MD, on the screen for every attempts made to beat the timer.
+
+While this is simple tool, it presents an opportunity for coding enthusiasts to contribute to further development of this application. User are welcomed to replicate and enhance the application by adding more questions, answers, and structure to assist in elevating the application to a higher challenging level.
+
+Let's get started and good luck!
+
+Copy the link and paste in your favorite browser or click this link https://cbcutgithub.github.io/Beat-the-Timer-Code-Trivial-Quiz/ to launch the Beat the Timer Code Trivial Quiz.
+
+If you have any questions or need assistance, please send a message via https://github.com/.
+
+Credits, contributions and Acknowledgments from resource searches on www.google.com, https://www.w3schools.com , and https://developer.mozilla.org/en-US/.

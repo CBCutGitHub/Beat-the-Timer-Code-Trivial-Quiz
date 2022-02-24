@@ -92,7 +92,7 @@ function checkQuestion (){
         }
         // display updated time
         timerdisplay.textContent = time;
-    alert("Incorrect! (review topic)")
+    alert("Incorrect! (research topic)")
       } else {
     alert("Correct!")
       }
