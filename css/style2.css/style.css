@@ -1,0 +1,146 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+.wrapper {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+/* hide elemnts */
+.hide{display:none}
+
+body {
+  font-family: Georgia;
+  background-color: #6099f5;
+}
+
+.wrapper {
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+header {
+  text-align: center;
+  padding: 30px;
+  padding-top: 0px;
+  color: hsl(59, 100%, 54%);
+}
+
+.card {
+  background-color: hsl(224, 97%, 65%);
+  border-radius: 4px;
+  border-width: 1px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
+  color: hsla(64, 100%, 52%, 0.911);
+  /* color: hsl(206, 17%, 28%); */
+  font-size: 20px;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 30px 40px;
+}
+
+.card-header::after {
+  content: " ";
+  display: block;
+  width: 70%;
+  background:  #f35454; /*#5491f3
+  height: 12px;
+}
+
+.card-body {
+  min-height: 100px;
+}
+
+.card-footer {
+  text-align: center;
+}
+
+.card-footer::before {
+  content: " ";
+  display: block;
+  width: 100%;
+  background:  #67e7c7;
+  height: 1px;
+}
+
+.card-footer::after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+.btn {
+  border: none;
+  background-color: rgb(230, 246, 85);
+  border-radius: 20px;
+  box-shadow: rgba(102, 53, 7, 0.1) 0px 1px 2px 1px rgba(0, 0, 0, 0.2) 0px 1px 1px
+    0px;
+  color: hsl(234, 95%, 31%);
+
+  display: inline-block;
+  font-size: 15px;
+  line-height: 10px;
+  margin: 16px 16px 16px 16px;
+  padding: 14px 34px;
+  text-align: center;
+  cursor: pointer;
+}
+
+button[disabled] {
+  cursor: default;
+  background: #d4c69e;
+}
+
+.float-right {
+  float: right;
+}
+/* 
+#password {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: inset;
+  display: block;
+  width: 100%;
+  padding-top: 12px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 35px;
+  font-size: 3.2rem;
+  background-color: beige;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border: 2px solid #d6c390;
+  border-radius: 6px;
+  resize: none;
+  overflow: hidden;
+}
+
+@media (max-width: 690px) {
+  .btn {
+    font-size: 1.5rem;
+    margin: 16px 0px 0px 0px;
+    padding: 10px 15px;
+  }
+
+  #password {
+    font-size: 50rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .btn {
+    font-size: 18rem;
+  }
+}
+.textstyle{
+  font-family: 'Georgia', 'Courier New', monospace;
+} */

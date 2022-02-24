@@ -1,43 +1,47 @@
-// Add questions and global variables that reference html elements
+// Quiz questions and answer
 var quizQuestions = [
     {
-     title: "Commonly used data types DO NOT include:",
-     choices: ["strings", "booleans", "alerts", "numbers"],
-     answer: "alerts"
+      title: "Which best describes a wireframe",
+      selectFrom: ["conversion", "image holder", "schematic", "path"],
+      answer: "alerts"
     },
     {
-     title: "The condition in an if / else statement is enclosed within ____.",
-     choices: ["quotes", "curly brackets", "parentheses", "square brackets"],
-     answer: "parentheses"
-    },
-    // ***ADDING 3 MORE QUESTIONS AND ANSWERS***
-    {
-     title: "div has no meaning but represents:",
-     choices: ["input", "children", "output", "submit"],
-     answer: "children"
+      title: "which is a responsive concept?",
+      selectFrom: ["callout", "RWD", "card", "square brackets"],
+      answer: "RWD"
     },
     {
-     title: "src attribute specifies the what of an external script:",
-     choices: ["webpage", "service", "URL", "link"],
-     answer: "URL"
+      title: "div has no meaning but represents:",
+      selectFrom: ["input", "children", "output", "submit"],
+      answer: "children"
+    },
+    {
+      title: "src attribute specifies the what of an external script:",
+      selectFrom: ["webpage", "service", "URL", "link"],
+      answer: "URL"
     },
     {
       title: "Input element represents what kind of data:",
-      choices: ["array data", "autofill data", "optional data", "typed data"],
+      selectFrom: ["array data", "autofill data", "optional data", "typed data"],
       answer: "typed data"
+    },
+    {
+      title: "What can floats be used for?",
+      selectFrom: ["data storage", "images inside blocks", "place holders", "display lighter objects"],
+      answer: "images inside blocks"
     }
-   ]
+    ]
 var questions = document.getElementById("questions");
 var timerdisplay= document.getElementById("time");
-var questionchoices = document.getElementById("choices");
-var submit = document.getElementById("submit");
+var questionchoices = document.getElementById("selectFrom");
+var submit = document.getElementById("submitScores");
 var startBtn = document.getElementById("start");
 var initialsEl = document.getElementById("initials");
 var score = document.getElementById ("final-score");
 var QuestionIndex = 0;
 var time = 60;
 var timestate;
-// Define time increments
+// Define time increments; no seconds left, quiz over and clear
 function Incrementtime(){
 time = time - 1
 timerdisplay.textContent=time
@@ -66,7 +70,7 @@ title.textContent = currentQuestion.title
 questionchoices.innerHTML = ""
 
 // 
-currentQuestion.choices.forEach((choice) => {
+currentQuestion.selectFrom.forEach((choice) => {
     // create each choices as a button
     var choiceNode = document.createElement("button");
     choiceNode.setAttribute("class", "choices");
@@ -86,19 +90,18 @@ function checkQuestion (){
         if (time < 0) {
           time = 0;
         }
-        // show updated time in top right corner
+        // display updated time
         timerdisplay.textContent = time;
-     alert("wrong!!")
+    alert("Incorrect! (review topic)")
       } else {
     alert("Correct!")
       }
-      // cycle to next question
+      // move to next question
       QuestionIndex++;
-      if (QuestionIndex ===quizQuestions.length) {
+      if (QuestionIndex === quizQuestions.length) {
         endQuiz()
 
-        
-      } else {
+          } else {
         displayQuestion();
       }
 }
@@ -114,7 +117,7 @@ function reloadQuiz(){
   window.location.reload()
 }
 //** WORKING on resolving the final score and functionality of the 
-//initials and submit and save to local storage.
+//initials, submit and save to local storage.
 function saveScore (){
 
   var getinitials = initialsEl.value
@@ -122,23 +125,23 @@ function saveScore (){
     score:time,
     userName:getinitials
   }
-// Upon load, get value in loocal storage; if no value, leave as empty array
+// Upon load, get value in local storage; if no value, leave as empty array
   var scoreDisplay = JSON.parse(localStorage.getItem("userscores"))|| []
 // If there is a new userscore, push to scoreDisplay array
-scoreDisplay.push(userScore)
+    scoreDisplay.push(userScore)
 // Set any userscores into localStorage with the label userscores
-localStorage.setItem("userscores", JSON.stringify(scoreDisplay))
+    localStorage.setItem("userscores", JSON.stringify(scoreDisplay))
+  
 }
 function showscoreTable(){
   var scoreDisplay = JSON.parse(localStorage.getItem("userscores"))|| []
-scoreDisplay.forEach(function(newScore){
+    scoreDisplay.forEach(function(newScore){
   var scoreList = document.getElementById("showscores")
   var scorelistItem = document.createElement("li")
-scorelistItem.textContent = newScore.userName + ": "+ newScore.score
-scoreList.appendChild(scorelistItem)
+    scorelistItem.textContent = newScore.userName + ": "+ newScore.score
+    scoreList.appendChild(scorelistItem)
 })
 }
-// line 19 html and line 6 script.js
 showscoreTable()
-startBtn.onclick = StartQuiz
-submit.onclick = saveScore
+  startBtn.onclick = StartQuiz
+  submit.onclick = saveScore

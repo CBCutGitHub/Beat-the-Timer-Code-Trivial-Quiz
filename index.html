@@ -1,50 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Coding Quiz</title>
-  <link rel="stylesheet" href="./assets/css/style.css" />
- </head>
- <body>
-  <!-- visible on load  -->
-  <div class="timer">Time: <span id="time">60</span></div>
-  <div class="wrapper">
-   <div id="start-screen" class="start">
-    <!-- <h1>This is a Coding Quiz</h1> -->
-    <h1> Coding Trivial Quiz</h1>
-    <h2> Test Your Coding Knowledge </h2>
-    <h2> Good Luck!</h2>
-    <!-- <p>
-     Answer these Trivia Questions
-    </p> -->
-    <button id="start">Start Quiz</button>
-   </div>
-   <!-- hide the questions -->
-   <div id="questions" class="hide">
-    <h2 id="question-title"></h2>
-    <div id="choices" class="choices"></div>
-   </div>
-   <!-- end of quiz unhide with finished with questions -->
-   <div id="end-screen" class="hide">
-    <h2> I AM NOT DONE</h2>
-    <p>You have completed quiz with <span id="final-score"></span> seconds remaining.</p>
-    <p>
-     Enter initials: <input type="text" id="initials" max="3" />
-     <button id="submit">Submit</button>
+  <head>
+    <!--ADDITION 1  -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Coding Trival Quiz</title>
+    <link rel="stylesheet" href="css/style2.css/style.css" />
+    <!--END ADDITION 1  -->  
+</head>
+  <body>
+    <!--ADDITION 2  -->    
+      <header>
+          <h1 class="textstyle"> Beat the Timer Coding Trival Quiz</h1>
+        </header>
+      <div class="timer">timer: <span id="time">60</span></div>
+        <!--END ADDITION 2  -->
+    <!-- visible on load -->
+    <div class="wrapper">
+    <div id="start-screen" class="start">
+        <div class="card">
+          <div class="card-header">
+            <h2>Test Your Coding Knowledge</h2>
+            <h2>Good Luck!</h2>
+          </div>
+          <div class="card-body">
+            <textarea
+              readonly
+              placeholder="Questions"
+              aria-label="Generated Password"
+              placeholder="Try Again?"
+            > </textarea> 
+            </div>
+            <div class="card-footer">
+            <button id="start" class="btn">Start Quiz</button>
+            <!-- <button id="submitScores" class="btn">Submit</button> -->
+              <h3>The challenge is to answer 6 questions in 60 seconds!</h3>
+            <h3>Timer's remaining seconds is your score!</h3>
+          </div>
+        </div>
+      </div>
+
+    <!-- hide the questions -->
+        <div id="questions" class="hide">
+      <h2 id="question-title"></h2>
+        <div id="selectFrom" class="choices"></div>
+    </div>
+
+    <!-- end of quiz unhide with finished with questions -->
+    <div id="end-screen" class="hide">
+        <p>You have completed quiz with <span id="final-score"></span> seconds remaining.</p>
+    
+      Enter initials: <input type="text" id="initials" max="3" />
+      <button id="submitScores">Submit</button>
     </p>
 
     <ol id="showscores"></ol>
     <button onclick="reloadQuiz()">Try Again?</button>
+    </div>
 
-   </div>
-
-   <div>
-
-   </div>
-   <!-- <div id="rightwrong" class=“rightwrong hide"></div> -->
-  </div> 
-  <script src= "assets/js/script.js"></script>
-  </body>
+    <script src= "js/script.js"></script>
+  <!-- End ADDITION 2 -->
+  </body> 
 </html>
