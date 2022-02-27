@@ -14,7 +14,7 @@ This application presents a challenge to users to beat the timer by answering si
 
 Application start screen image:![image of start screen](./asset/AppStartScreen_BTTCTQ.png)
 
-Quiz Questions AND Answers
+Quiz Questions and Answers
 
 Once the user clicks the Start Quiz button, the timer starts, the questions and choice of answers are displayed one at a time. 
 
