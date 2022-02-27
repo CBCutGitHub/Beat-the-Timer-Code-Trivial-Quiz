@@ -3,7 +3,7 @@ var quizQuestions = [
     {
       title: "Which best describes a wireframe",
       selectFrom: ["conversion", "image holder", "schematic", "path"],
-      answer: "alerts"
+      answer: "schematic"
     },
     {
       title: "which is a responsive concept?",

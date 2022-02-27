@@ -6,15 +6,17 @@ Beat the Timer Code Trivial Quiz application is an extremely simple to use tool 
 
 Code Quiz Activities
 
-Most code quiz activities are offered with programming classes or as an open source tool that allow users to gauge their knowledge on a variety of topics.  Some quiz are specific to a programming language and some quiz covers a broad spectrum of methodologies , functionalities, and techniques. 
+Most code quiz activities are offered with programming classes or as an open source tool that allow users to gauge their knowledge on a variety of topics.  Some quiz are specific to a programming language and some quiz covers a broad spectrum of methodologies, functionalities, and techniques. 
 
 Application Functionality
 
 This application presents a challenge to users to beat the timer by answering six questions with a 60-second time limit.  Upon launching the application, a timer set at 60 seconds and the start quiz button appears on the screen. 
 
-Application start screen and launch questions images: https://github.com/CBCutGitHub/Beat-the-Timer-Code-Trivial-Quiz/blob/main/App%20Start%20Screen_BTTCTQ.PNG 
+Application start screen and launch questions images: <img src="images/app%20Start%20Screen_BTTCTQ.png" width="100" >
 
-Quiz Questions and answers
+https://github.com/CBCutGitHub/Beat-the-Timer-Code-Trivial-Quiz/blob/main/App%20Start%20Screen_BTTCTQ.PNG 
+
+Quiz Questions and Answers
 
 Once the user clicks the Start Quiz button, the timer starts, the questions and choice of answers are displayed one at a time. 
 
@@ -24,9 +26,10 @@ When the user click on their choice as the answer, an alert will appear. If the 
 
 Save Score and Display Quiz Results
 
-Application save score image: https://github.com/CBCutGitHub/Beat-the-Timer-Code-Trivial-Quiz/blob/main/Saved%20Scores_BTTCTQ.PNG
+Application save score image: 
+https://github.com/CBCutGitHub/Beat-the-Timer-Code-Trivial-Quiz/blob/main/Saved%20Scores_BTTCTQ.PNG
 
-The user’s score is the remaining seconds displayed on the timer. The user is prompted to enter their initials up to 3 characters and click submit to save the results. The results are then displayed e.g., 31: MD, on the screen for every attempts made to beat the timer.
+The user’s score is the remaining seconds displayed on the timer. The user is prompted to enter their initials up to 3 characters and click submit to save the results. The results are then displayed e.g., MD:31, on the screen for every attempts made to beat the timer.
 
 
 While this is simple tool, it presents an opportunity for coding enthusiasts to contribute to further development of this application. User are welcomed to replicate and enhance the application by adding more questions, answers, and structure to assist in elevating the application to a higher challenging level.
