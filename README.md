@@ -18,13 +18,13 @@ Quiz Questions and Answers
 
 Once the user clicks the Start Quiz button, the timer starts, the questions and choice of answers are displayed one at a time. 
 
-Application launched screen image:![image of start screen](./asset/Quiz%20Launched%20Screen_BTTCTQ.PNG
+Application launched screen image:![image of launched screen](./asset/Quiz%20Launched_BTTCTQ.PNG
 
 When the user click on their choice as the answer, an alert will appear. If the answer selected is correct, an alert will appear with a message “correct!” or if the answer is not correct, the message is “Incorrect! (research topic)”. For every incorrect answer, the user is penalized -10 seconds.
 
 Save Score and Display Quiz Results
 
-Application save score image: ![image of start screen](./asset/Saved%20Scores_BTTCTQ.PNG
+Application saved scores image:![image of saved score screen](./asset/Saved%20Scores_BTTCTQ.PNG
 
 The user’s score is the remaining seconds displayed on the timer. The user is prompted to enter their initials up to 3 characters and click submit to save the results. The results are then displayed e.g., MD:31, on the screen for every attempts made to beat the timer.
 
