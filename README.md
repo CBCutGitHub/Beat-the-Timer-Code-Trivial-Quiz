@@ -22,7 +22,7 @@ Application launched screen image:![image of launched screen](./asset/Quiz%20Lau
 
 When the user click on their choice as the answer, an alert will appear. If the answer selected is correct, an alert will appear with a message “correct!” or if the answer is not correct, the message is “Incorrect! (research topic)”. For every incorrect answer, the user is penalized -10 seconds.
 
-Save Score and Display Quiz Results
+Saved Score and Display Quiz Results
 
 Application saved scores image:![image of saved score screen](./asset/Saved%20Scores_BTTCTQ.PNG
 
