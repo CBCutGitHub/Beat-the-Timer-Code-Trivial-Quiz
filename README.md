@@ -12,22 +12,19 @@ Application Functionality
 
 This application presents a challenge to users to beat the timer by answering six questions with a 60-second time limit.  Upon launching the application, a timer set at 60 seconds and the start quiz button appears on the screen. 
 
-Application start screen and launch questions images: <img src="images/app%20Start%20Screen_BTTCTQ.png" width="100" >
-
-https://github.com/CBCutGitHub/Beat-the-Timer-Code-Trivial-Quiz/blob/main/App%20Start%20Screen_BTTCTQ.PNG 
+Application start screen image:![image of start screen](./asset/App%20Start%20Screen_BTTCTQ.PNG
 
 Quiz Questions and Answers
 
 Once the user clicks the Start Quiz button, the timer starts, the questions and choice of answers are displayed one at a time. 
 
-https://github.com/CBCutGitHub/Beat-the-Timer-Code-Trivial-Quiz/blob/main/Quiz%20Lunched_BTTCTQ.PNG
+Application launched screen image:![image of start screen](./asset/Quiz%20Launched%20Screen_BTTCTQ.PNG
 
 When the user click on their choice as the answer, an alert will appear. If the answer selected is correct, an alert will appear with a message “correct!” or if the answer is not correct, the message is “Incorrect! (research topic)”. For every incorrect answer, the user is penalized -10 seconds.
 
 Save Score and Display Quiz Results
 
-Application save score image: 
-https://github.com/CBCutGitHub/Beat-the-Timer-Code-Trivial-Quiz/blob/main/Saved%20Scores_BTTCTQ.PNG
+Application save score image: ![image of start screen](./asset/Saved%20Scores_BTTCTQ.PNG
 
 The user’s score is the remaining seconds displayed on the timer. The user is prompted to enter their initials up to 3 characters and click submit to save the results. The results are then displayed e.g., MD:31, on the screen for every attempts made to beat the timer.
 
