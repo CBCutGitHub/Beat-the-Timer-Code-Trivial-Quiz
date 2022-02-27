@@ -12,19 +12,19 @@ Application Functionality
 
 This application presents a challenge to users to beat the timer by answering six questions with a 60-second time limit.  Upon launching the application, a timer set at 60 seconds and the start quiz button appears on the screen. 
 
-Application start screen image:![image of start screen](./asset/AppStartScreen_BTTCTQ.png
+Application start screen image:![image of start screen](./asset/AppStartScreen_BTTCTQ.png)
 
-Quiz Questions and Answers
+Quiz Questions AND Answers
 
 Once the user clicks the Start Quiz button, the timer starts, the questions and choice of answers are displayed one at a time. 
 
-Application launched screen image:![image of launched screen](./asset/QuizLaunched_BTTCTQ.png
+Application launched screen image:![image of launched screen](./asset/QuizLaunched_BTTCTQ.png)
 
 When the user click on their choice as the answer, an alert will appear. If the answer selected is correct, an alert will appear with a message “correct!” or if the answer is not correct, the message is “Incorrect! (research topic)”. For every incorrect answer, the user is penalized -10 seconds.
 
 Saved Scores and Display Quiz Results
 
-Application saved scores image:![image of saved score screen](./asset/SavedScores_BTTCTQ.png
+Application saved scores image:![image of saved score screen](./asset/SavedScores_BTTCTQ.png)
 
 The user’s score is the remaining seconds displayed on the timer. The user is prompted to enter their initials up to 3 characters and click submit to save the results. The results are then displayed e.g., 1. MD:31, on the screen for every attempts made to beat the timer.
 
